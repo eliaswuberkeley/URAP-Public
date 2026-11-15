@@ -28,6 +28,12 @@ The historical research directories were not modified.
 complete clean replay environment. The tag-triggered GitHub workflow repeats tests,
 source reconstruction and archive verification before publishing the download.
 
+The first Linux x64 workflow passed all 19 tests and pair replay but failed the
+PNG hash check during reconstruction. Version 1.0.1 uses a macOS ARM64 runner to
+match the locally verified encoder platform. Package-version pins alone did not
+ensure identical encoded images. The check was not relaxed and no mismatched
+image files were published. On other platforms, use the prebuilt Release ZIP.
+
 ## Limits
 
 This validates artifact integrity and computational replay, not the truth of

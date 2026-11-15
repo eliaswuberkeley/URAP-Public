@@ -9,8 +9,8 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-TAG = "fairface-v1.0.0"
-NAME = "fairface-matched-v1.0.0.zip"
+TAG = "fairface-v1.0.1"
+NAME = "fairface-matched-v1.0.1.zip"
 
 
 def digest(data):

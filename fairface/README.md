@@ -6,8 +6,8 @@ portrait. Labels are the dataset publisher's categories, not verified identities
 
 ## Download
 
-[Versioned image download](https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.0)
-contains `fairface-matched-v1.0.0.zip`, its checksums, and a release manifest.
+[Versioned image download](https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.1)
+contains `fairface-matched-v1.0.1.zip`, its checksums, and a release manifest.
 The ZIP contains 4,000 individual PNGs, not 2,000 side-by-side composites.
 The files have **original backgrounds**. Brightness normalization failed its
 research quality checks and is not part of this release.
@@ -67,6 +67,11 @@ may include new renderer metadata.
 This explicitly downloads about 500 MB of public FairFace training Parquet shards,
 then reconstructs and SHA-256-checks all 4,000 selected PNGs. It requires roughly
 1 GB of free disk plus working memory. It does not run an API or expression model.
+**Exact PNG regeneration was validated on macOS ARM64**, Python 3.11, Pillow 11.3.0
+with zlib-ng 2.2.4. An Ubuntu x64 build using the same Python package versions
+failed the PNG-byte check. Matching and offline analysis work on Linux; to obtain
+the exact image bytes there, download the Release ZIP instead of re-encoding.
+The validator deliberately rejects differently encoded PNGs, even if they look alike.
 Source is `HuggingFaceM4/FairFace`, config `0.25`, publisher `train`, pinned to
 `54d573cdb8b5af490ba8da9da2799628f6e5c496`. This publisher split differs from our
 research train/development/test allocation. Cached shards can be supplied using

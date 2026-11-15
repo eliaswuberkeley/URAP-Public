@@ -93,7 +93,14 @@ def main():
         data = io.BytesIO()
         rgb.save(data, format="PNG", optimize=False)
         if digest(data.getvalue()) != row["image_sha256"]:
-            raise ValueError("Reconstructed PNG hash mismatch; check Pillow version")
+            from PIL import features
+            pixel_sha = digest(f"{rgb.width}x{rgb.height}|RGB|".encode() + rgb.tobytes())
+            raise ValueError(
+                "Reconstructed PNG hash mismatch for " + row["image_id"]
+                + "; decoded_pixels_match=" + str(pixel_sha == row["pixel_sha256"])
+                + "; zlib=" + str(features.version("zlib"))
+                + ". Use the published Release ZIP for exact bytes, or the validated macOS ARM64 encoder."
+            )
         atomic_bytes(dest, data.getvalue())
     print(json.dumps({"images_verified_or_rebuilt": len(rows)}))
 

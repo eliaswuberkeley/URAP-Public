@@ -21,7 +21,7 @@ column definitions, and code to regenerate both figures without model calls.
 The code, data and figures are public at:
 https://github.com/eliaswuberkeley/URAP-Public/tree/main/fairface-iat
 The full original-background image download is available separately at:
-https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.0
+https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.1
 Matching methods and exact sample reconstruction:
 https://github.com/eliaswuberkeley/URAP-Public/tree/main/fairface
 The images have automated, not human-verified, expression labels. LoRA weights

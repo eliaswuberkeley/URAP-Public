@@ -7,7 +7,7 @@ Public research code and reproducibility resources maintained by Elias Wu.
 | Resource | Contents |
 | --- | --- |
 | [Matched FairFace dataset](fairface/README.md) | 2,000 pairs / 4,000 portraits; exact reconstruction, methods and column glossary. |
-| [Public image download](https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.0) | Versioned ZIP attachment, checksums and attribution. Images are not stored in Git history. |
+| [Public image download](https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.1) | Versioned ZIP attachment, checksums and attribution. Images are not stored in Git history. |
 | [Matched FairFace IAT results](fairface-iat/README.md) | Local base Gemma, 120 development portraits, 600 responses, full 61-word plot and raw data. |
 | [Main IAT chart](fairface-iat/plots/fairface_base_61_word_counts_sorted.png) | Positive words left, negative words right, each half sorted by pooled frequency. |
 | [Publication validation](VALIDATION.md) | Checks performed, reproducibility limits and source preservation. |
@@ -23,10 +23,12 @@ separate tasks. Model weights and unrelated private research are not included.
 
 ## Versioning
 
-`fairface-v1.0.0` preserves the October 6 selection. Changes to membership, labels,
+`fairface-v1.0.1` preserves the October 6 selection. Changes to membership, labels,
 splits or preprocessing should receive a new version and release, never silently
 replace this dataset. Each release pins a source-code commit and archive checksum.
 The release workflow reconstructs and verifies every image before publishing.
+Version 1.0.1 fixes the build platform for exact PNG bytes; the earlier 1.0.0
+source tag remains in history, but its Linux build stopped before publishing images.
 
 ## Licensing
 

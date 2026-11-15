@@ -100,7 +100,7 @@ inference or complete dataset construction.
 
 ## Dataset access and matching code
 
-The [public Release](https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.0)
+The [public Release](https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.1)
 contains all 4,000 original individual images, including these 120 evaluated portraits.
 Use `data/evaluated_images.csv` to locate them; image paths are relative to the
 release's `private/dataset/`. Verify hashes against `data/curated_images.csv`.

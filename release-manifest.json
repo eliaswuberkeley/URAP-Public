@@ -1,8 +1,8 @@
 {
-  "tag": "fairface-v1.0.0",
-  "asset": "fairface-matched-v1.0.0.zip",
-  "sha256": "32c8f8971eb7c503b52a06ee0ed00b35955c84fdda98ddb6e23040a1fdebee26",
-  "bytes": 231279882,
+  "tag": "fairface-v1.0.1",
+  "asset": "fairface-matched-v1.0.1.zip",
+  "sha256": "ef36b6d60b8e1b155854e8cbfc5d77a509004f8c764d6e4894eb7583793ecf13",
+  "bytes": 231280291,
   "images": 4000,
   "matched_pairs": 2000,
   "images_by_split": {
