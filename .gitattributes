@@ -1,0 +1,3 @@
+# Preserve exact bytes for frozen-artifact checksums on every checkout.
+* -text
+*.csv whitespace=cr-at-eol

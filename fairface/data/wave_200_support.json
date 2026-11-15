@@ -1,0 +1,28 @@
+{
+  "annotated_candidates": 3679,
+  "common_pair_capacity_per_gender": 523,
+  "pairs_by_gender": {
+    "Female": 523,
+    "Male": 523
+  },
+  "pairs_by_split": {
+    "development": 208,
+    "test": 212,
+    "train": 626
+  },
+  "quality_scales": {
+    "contrast": 0.05414064993149884,
+    "log_edge_energy": 0.44568574844005465
+  },
+  "selected_age_counts_per_race_gender": {
+    "20-29": 131,
+    "30-39": 123,
+    "40-49": 109,
+    "50-59": 117,
+    "60-69": 43
+  },
+  "selected_images": 2092,
+  "selected_pairs": 1046,
+  "shortfall_pairs": 954,
+  "target_pairs": 2000
+}

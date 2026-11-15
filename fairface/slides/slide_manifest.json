@@ -1,0 +1,342 @@
+[
+  {
+    "finding": "2,000 Black-White pairs contain 4,000 distinct images. Selection uses image attributes, not model bias scores.",
+    "id": "01_sample_selection",
+    "panels": [
+      {
+        "categories": [
+          "Screened",
+          "Passed screening",
+          "Matching pool",
+          "Selected"
+        ],
+        "kind": "grouped_bar",
+        "labels": true,
+        "series": [
+          {
+            "color": "#197A72",
+            "label": "Images",
+            "values": [
+              16871,
+              16837,
+              11127,
+              4000
+            ]
+          }
+        ],
+        "xlabel": "",
+        "ylabel": "Images"
+      }
+    ],
+    "plot": "plots/01_sample_selection.png",
+    "sources": [
+      "data/candidate_audit.csv",
+      "data/matching_candidate_pool.csv",
+      "data/selected_images.csv"
+    ],
+    "title": "FairFace matched sample"
+  },
+  {
+    "finding": "All four groups have equal counts in each split: 2,400 training, 800 development and 800 test images overall.",
+    "id": "02_groups_and_splits",
+    "panels": [
+      {
+        "categories": [
+          "Black\nFemale",
+          "White\nFemale",
+          "Black\nMale",
+          "White\nMale"
+        ],
+        "kind": "grouped_bar",
+        "labels": true,
+        "series": [
+          {
+            "color": "#197A72",
+            "label": "Train",
+            "values": [
+              600,
+              600,
+              600,
+              600
+            ]
+          },
+          {
+            "color": "#CB526B",
+            "label": "Development",
+            "values": [
+              200,
+              200,
+              200,
+              200
+            ]
+          },
+          {
+            "color": "#577EBB",
+            "label": "Test",
+            "values": [
+              200,
+              200,
+              200,
+              200
+            ]
+          }
+        ],
+        "xlabel": "",
+        "ylabel": "Images"
+      }
+    ],
+    "plot": "plots/02_groups_and_splits.png",
+    "sources": [
+      "analysis/group_split_counts.csv"
+    ],
+    "title": "Race, gender and research splits"
+  },
+  {
+    "finding": "Age-band counts are identical across race/gender groups. Coverage is limited by the least available matching strata; this is not a population-representative sample.",
+    "id": "03_age_balance",
+    "panels": [
+      {
+        "categories": [
+          "20-29",
+          "30-39",
+          "40-49",
+          "50-59",
+          "60-69"
+        ],
+        "kind": "grouped_bar",
+        "series": [
+          {
+            "color": "#197A72",
+            "label": "Black Female",
+            "values": [
+              261,
+              261,
+              260,
+              175,
+              43
+            ]
+          },
+          {
+            "color": "#CB526B",
+            "label": "White Female",
+            "values": [
+              261,
+              261,
+              260,
+              175,
+              43
+            ]
+          },
+          {
+            "color": "#577EBB",
+            "label": "Black Male",
+            "values": [
+              261,
+              261,
+              260,
+              175,
+              43
+            ]
+          },
+          {
+            "color": "#8D729C",
+            "label": "White Male",
+            "values": [
+              261,
+              261,
+              260,
+              175,
+              43
+            ]
+          }
+        ],
+        "xlabel": "Publisher age band",
+        "ylabel": "Images per group"
+      }
+    ],
+    "plot": "plots/03_age_balance.png",
+    "sources": [
+      "analysis/age_expression_counts.csv",
+      "data/common_support_quotas.csv"
+    ],
+    "title": "Matched age coverage"
+  },
+  {
+    "finding": "Expression counts match across groups, including detailed labels within each class. 11.6% of images remain uncertain; estimates are not human-verified emotions.",
+    "id": "04_expression_balance",
+    "panels": [
+      {
+        "categories": [
+          "Neutral",
+          "Positive",
+          "Negative",
+          "Uncertain"
+        ],
+        "kind": "grouped_bar",
+        "series": [
+          {
+            "color": "#197A72",
+            "label": "Black Female",
+            "values": [
+              166,
+              452,
+              266,
+              116
+            ]
+          },
+          {
+            "color": "#CB526B",
+            "label": "White Female",
+            "values": [
+              166,
+              452,
+              266,
+              116
+            ]
+          },
+          {
+            "color": "#577EBB",
+            "label": "Black Male",
+            "values": [
+              166,
+              452,
+              266,
+              116
+            ]
+          },
+          {
+            "color": "#8D729C",
+            "label": "White Male",
+            "values": [
+              166,
+              452,
+              266,
+              116
+            ]
+          }
+        ],
+        "xlabel": "",
+        "ylabel": "Images per group"
+      }
+    ],
+    "plot": "plots/04_expression_balance.png",
+    "sources": [
+      "analysis/age_expression_counts.csv"
+    ],
+    "title": "Matched expression estimates"
+  },
+  {
+    "finding": "Bars show absolute Black-White mean differences in candidate standard-deviation units; closer to zero means closer averages. Brightness and clipping are reported, not forced equal.",
+    "id": "05_residual_quality_balance",
+    "panels": [
+      {
+        "categories": [
+          "Contrast",
+          "Log image detail",
+          "Expression confidence",
+          "Brightness",
+          "Dark clipping",
+          "Light clipping"
+        ],
+        "kind": "horizontal_bar",
+        "series": [
+          {
+            "color": "#197A72",
+            "label": "Before matching",
+            "values": [
+              0.16789006003355889,
+              0.05774508404534917,
+              0.10482017956753,
+              0.8072498283134659,
+              0.0191228159969987,
+              0.03213133841374581
+            ]
+          },
+          {
+            "color": "#CB526B",
+            "label": "Selected",
+            "values": [
+              0.029036779413818187,
+              0.003073865640735023,
+              0.0013478064096694316,
+              0.7073653986111184,
+              0.02347525110888974,
+              0.0009012055004563619
+            ]
+          }
+        ],
+        "xlabel": "Absolute standardized mean difference",
+        "ylabel": ""
+      }
+    ],
+    "plot": "plots/05_residual_quality_balance.png",
+    "sources": [
+      "analysis/quality_balance.csv"
+    ],
+    "title": "Measured quality and remaining differences"
+  },
+  {
+    "finding": "Each pair shares age band, gender and estimated expression label. Confidence differences are at most 0.15; contrast and log-detail differences are each at most 2 candidate SDs.",
+    "id": "06_pair_match_distances",
+    "panels": [
+      {
+        "categories": [
+          "0.00-0.03",
+          "0.03-0.06",
+          "0.06-0.09",
+          "0.09-0.12",
+          "0.12-0.15"
+        ],
+        "kind": "grouped_bar",
+        "series": [
+          {
+            "color": "#197A72",
+            "label": "Pairs",
+            "values": [
+              1646,
+              241,
+              81,
+              24,
+              8
+            ]
+          }
+        ],
+        "title": "Expression confidence difference",
+        "xlabel": "",
+        "ylabel": "Matched pairs"
+      },
+      {
+        "categories": [
+          "0.0-0.4",
+          "0.4-0.8",
+          "0.8-1.2",
+          "1.2-1.6",
+          "1.6-2.0"
+        ],
+        "kind": "grouped_bar",
+        "series": [
+          {
+            "color": "#197A72",
+            "label": "Pairs",
+            "values": [
+              1839,
+              126,
+              25,
+              6,
+              4
+            ]
+          }
+        ],
+        "title": "Contrast difference (SD)",
+        "xlabel": "",
+        "ylabel": "Matched pairs"
+      }
+    ],
+    "plot": "plots/06_pair_match_distances.png",
+    "sources": [
+      "data/matched_pairs.csv",
+      "analysis/pair_distance_summary.csv"
+    ],
+    "title": "Pair-level matching distances"
+  }
+]

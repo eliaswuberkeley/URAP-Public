@@ -1,0 +1,9 @@
+# Python 3.11; frozen-selection replay, image reconstruction and figure tests.
+numpy==2.2.6
+scipy==1.15.3
+Pillow==11.3.0
+matplotlib==3.10.5
+pyarrow==25.0.0
+huggingface-hub==0.36.2
+pytest==8.4.1
+ruff==0.12.8

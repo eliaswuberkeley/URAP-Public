@@ -1,0 +1,16 @@
+{
+  "historical_source_index_overlap": 0,
+  "images_by_split": {
+    "development": 800,
+    "test": 800,
+    "train": 2400
+  },
+  "pair_set_count": 1000,
+  "pairs": 2000,
+  "passed": true,
+  "person_identity_overlap_verified": false,
+  "prior_september29_source_index_overlap": 0,
+  "publisher_labels_match_inventory": true,
+  "selected_images": 4000,
+  "selected_manifest_sha256": "6ea35e8fa99256721b5f02cf86ac0f8d8c15e1d8923467c7f11973d7a087c33a"
+}

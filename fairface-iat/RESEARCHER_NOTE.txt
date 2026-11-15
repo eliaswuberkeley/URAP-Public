@@ -1,0 +1,28 @@
+Yes, we ran the IAT-style test on part of the new matched FairFace dataset.
+The full curated dataset contains 4,000 original portraits in 2,000 Black-White
+matches, balanced across the four race/gender cells. The benchmark used 120
+development portraits (60 matched pairs), with five answers per image, not all
+4,000 images. These are original-lighting images, not background-normalized ones.
+
+The attached sorted chart shows the untuned local Gemma 3 12B IT choosing three
+words from the fixed 61-word vocabulary. Positive words are left, negative words
+right, sorted within each half by total frequency across Black and White images.
+Pooled negative-word rates were 4.33% for Black images and 4.00% for White images.
+The earlier equal-expression-weighted report showed 4.01% and 3.97%, respectively.
+These are different summaries of the same saved answers, not different model runs.
+
+The small aggregate gap is not proof of fairness: expression subgroups have
+opposite gaps, and the development sample is exploratory. This is also a different
+image population from the original 12-face benchmark, so their bars need not match.
+
+Included: the plot, sample-composition plot, all 600 raw response records, sorted
+word counts, the 120-image evaluation index, full 4,000-image/2,000-pair metadata,
+column definitions, and code to regenerate both figures without model calls.
+The code, data and figures are public at:
+https://github.com/eliaswuberkeley/URAP-Public/tree/main/fairface-iat
+The full original-background image download is available separately at:
+https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.0
+Matching methods and exact sample reconstruction:
+https://github.com/eliaswuberkeley/URAP-Public/tree/main/fairface
+The images have automated, not human-verified, expression labels. LoRA weights
+and background-normalized variants are not part of this public release.

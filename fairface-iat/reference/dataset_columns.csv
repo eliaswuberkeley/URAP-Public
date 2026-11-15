@@ -1,0 +1,52 @@
+file,column,definition
+data/curated_images.csv,age_band,Publisher age band; exact age is unavailable.
+data/curated_images.csv,brightness,"Mean grayscale pixel intensity divided by 255, range 0-1; diagnostic only."
+data/curated_images.csv,candidate_path,Relative path from project root to cached candidate PNG; not the final delivery path.
+data/curated_images.csv,clipped_dark_fraction,Fraction of grayscale pixels <=5/255; diagnostic only.
+data/curated_images.csv,clipped_light_fraction,Fraction of grayscale pixels >=250/255; diagnostic only.
+data/curated_images.csv,contrast,Standard deviation of grayscale intensity on the 0-1 scale; matching proxy.
+data/curated_images.csv,difference_hash,64-bit grayscale difference hash encoded as hexadecimal.
+data/curated_images.csv,duplicate_of,First prior image or historical reference matching duplicate checks; empty otherwise.
+data/curated_images.csv,edge_energy,Sum of mean absolute vertical and horizontal neighboring-pixel differences on 0-1 grayscale.
+data/curated_images.csv,expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.
+data/curated_images.csv,expression_confidence,"Maximum softmax probability, 0-1; not calibrated emotion or intensity certainty."
+data/curated_images.csv,expression_label,Pinned classifier's highest-probability visible-expression label.
+data/curated_images.csv,expression_model_id,"Hugging Face ID of the local expression classifier, not Gemma."
+data/curated_images.csv,expression_model_revision,Pinned classifier Git revision.
+data/curated_images.csv,expression_provenance,Exact-image/model cached September 29 estimate or new October 6 CPU inference.
+data/curated_images.csv,height,Exported image height in pixels.
+data/curated_images.csv,image_id,Stable unique image key derived from publisher training-row index.
+data/curated_images.csv,image_path,Final PNG path relative to private/dataset or the unzipped image-package root.
+data/curated_images.csv,image_sha256,SHA-256 of exported RGB PNG bytes.
+data/curated_images.csv,inventory_status,Metadata eligibility or the first applicable exclusion reason.
+data/curated_images.csv,log_edge_energy,"Natural logarithm of max(edge_energy, 1e-8); matching proxy, not validated sharpness."
+data/curated_images.csv,match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).
+data/curated_images.csv,pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.
+data/curated_images.csv,perceptual_hash,64-bit DCT perceptual hash encoded as hexadecimal; approximate duplicate screening.
+data/curated_images.csv,pixel_sha256,"SHA-256 of RGB dimensions, mode prefix, and decoded pixel bytes."
+data/curated_images.csv,review_status,automated_only; no independent human review.
+data/curated_images.csv,screen_rank,SHA-256 seeded ordering key; not a quality or bias score.
+data/curated_images.csv,screening_status,Technical/image-duplicate screening decision.
+data/curated_images.csv,source_gender,Publisher-provided Female or Male category; not verified identity.
+data/curated_images.csv,source_id,"Publisher split and zero-padded row index, e.g. train:012345."
+data/curated_images.csv,source_image_sha256,SHA-256 of the original encoded source image bytes.
+data/curated_images.csv,source_index,Zero-based index in the pinned concatenated FairFace training shards.
+data/curated_images.csv,source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.
+data/curated_images.csv,source_revision,Pinned Hugging Face dataset Git revision.
+data/curated_images.csv,source_split,"Publisher source split; train, distinct from the new research split."
+data/curated_images.csv,split,"New research allocation: train, development, or test."
+data/curated_images.csv,width,Exported image width in pixels.
+data/matched_pairs.csv,age_band,Publisher age band; exact age is unavailable.
+data/matched_pairs.csv,black_image_id,Image ID of the pair member with publisher label Black.
+data/matched_pairs.csv,confidence_abs_difference,"Absolute difference between paired classifier confidence values, constrained to <=0.15."
+data/matched_pairs.csv,contrast_difference_sd,Paired Black-minus-White contrast difference divided by the matching-pool SD.
+data/matched_pairs.csv,expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.
+data/matched_pairs.csv,expression_label,Pinned classifier's highest-probability visible-expression label.
+data/matched_pairs.csv,expression_stratum,"Coarse expression class plus detailed top label, including uncertain status."
+data/matched_pairs.csv,log_edge_energy_difference_sd,Paired Black-minus-White log edge energy difference divided by matching-pool SD.
+data/matched_pairs.csv,match_cost,Sum of squared quality differences in pooled candidate SD units plus (confidence difference / 0.15)^2.
+data/matched_pairs.csv,match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).
+data/matched_pairs.csv,pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.
+data/matched_pairs.csv,source_gender,Publisher-provided Female or Male category; not verified identity.
+data/matched_pairs.csv,split,"New research allocation: train, development, or test."
+data/matched_pairs.csv,white_image_id,Image ID of the pair member with publisher label White.

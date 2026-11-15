@@ -1,0 +1,38 @@
+{
+  "data/base_responses.csv": {
+    "source": "gemma3-fairface-debiasing-october6/results/evaluation/base/development_screen/responses.csv",
+    "sha256": "662610c44d110666d83bce74e8c7fb9028873525e267fd8f65258042ecf2bcbd"
+  },
+  "data/curated_images.csv": {
+    "source": "image-dataset-curation-october6/data/selected_images.csv",
+    "sha256": "6ea35e8fa99256721b5f02cf86ac0f8d8c15e1d8923467c7f11973d7a087c33a"
+  },
+  "data/matched_pairs.csv": {
+    "source": "image-dataset-curation-october6/data/matched_pairs.csv",
+    "sha256": "afb24462aa356d99db142f8ded41fd6e8e790bd68266ce183ca75ac8cc9f82af"
+  },
+  "iat_protocol.py": {
+    "source": "gemma3-fairface-debiasing-october6/scripts/iat_protocol.py",
+    "sha256": "1385b78cd1808133fbb01f3b1726a8d67f378c7480df6ea2677a9aee33b18f9e"
+  },
+  "reference/evaluation_manifest.json": {
+    "source": "gemma3-fairface-debiasing-october6/results/evaluation/base/development_screen/manifest.json",
+    "sha256": "2651d08919a37938914d3552a442539b72210872293e996efcc85bbf807ef44a"
+  },
+  "reference/curation_config.json": {
+    "source": "image-dataset-curation-october6/config/curation.json",
+    "sha256": "8a6139e224328666363f28a8395411cd5497b2cfd57a0425f630f19e60af3d02"
+  },
+  "reference/recorded_base_metrics.csv": {
+    "source": "gemma3-fairface-debiasing-october6/results/analysis/model_metrics.csv",
+    "source_sha256": "8f98356650c79949212820a29d7033f3827c12157c23d11d7501100bf5f0dba3",
+    "selection": "panel=development_screen AND model_key=base",
+    "sha256": "383d08bcacf39b76511c9c73b1001562aeb6dc1c6d01c347099109d0a82ec903"
+  },
+  "reference/dataset_columns.csv": {
+    "source": "image-dataset-curation-october6/docs/COLUMN_GLOSSARY.csv",
+    "source_sha256": "e55d72ee172311c59655452401c2956b0c68c3e5717c7fbd938e0faf6710d202",
+    "sha256": "5fcecbeaa0fa5408f58fb466622aa7bf49e3ebe63fb1d48e2d0c19cefe377d5f",
+    "selection": "Definitions for columns in the two included dataset tables"
+  }
+}

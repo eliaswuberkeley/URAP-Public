@@ -1,0 +1,32 @@
+{
+  "balance": [
+    {
+      "images": 4000,
+      "joint_balance_equal": true,
+      "split": "all"
+    },
+    {
+      "images": 2400,
+      "joint_balance_equal": true,
+      "split": "train"
+    },
+    {
+      "images": 800,
+      "joint_balance_equal": true,
+      "split": "development"
+    },
+    {
+      "images": 800,
+      "joint_balance_equal": true,
+      "split": "test"
+    }
+  ],
+  "config_sha256": "8a6139e224328666363f28a8395411cd5497b2cfd57a0425f630f19e60af3d02",
+  "errors": [],
+  "human_validated": false,
+  "images": 4000,
+  "pairs": 2000,
+  "passed": true,
+  "person_disjointness_verified": false,
+  "target_reached": true
+}

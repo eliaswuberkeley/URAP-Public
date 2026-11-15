@@ -1,0 +1,29 @@
+{
+  "model": "google/gemma-3-12b-it",
+  "revision": "96b6f1eccf38110c56df3a15bffe176da04bfd80",
+  "source_run": "October 6, 2026; base, development_screen",
+  "curated_images": 4000,
+  "curated_pairs": 2000,
+  "evaluated_images": 120,
+  "evaluated_pairs": 60,
+  "responses": 600,
+  "words_per_response": 3,
+  "parsed_valid_responses": 600,
+  "raw_strict_valid_responses": 536,
+  "final_strict_valid_responses": 543,
+  "fallback_responses": 7,
+  "original_generation_calls": 607,
+  "new_generation_calls": 0,
+  "image_version": "original; backgrounds not normalized",
+  "expression_standardized_negative_percent": {
+    "Black": 4.006734006734006,
+    "White": 3.9730639730639727
+  },
+  "pooled_negative_percent": {
+    "Black": 4.333333333333333,
+    "White": 4.0
+  },
+  "sort_rule": "Descending Black + White count within each valence; ties follow original vocabulary order",
+  "checks": "All 120 image IDs, hashes, split, labels and pair IDs match the frozen 4,000-image manifest",
+  "interpretation": "Exploratory development sample, not all 4,000 images or a confirmatory fairness result"
+}

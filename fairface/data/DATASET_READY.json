@@ -1,0 +1,19 @@
+{
+  "files": {
+    "data/candidate_audit.csv": "9a99f8b441a3cf84345558ef342e887f5b4984681e13c8224bc283206aa80061",
+    "data/common_support_quotas.csv": "ebd959849b32cca32987c1f19b9d0e9c5b261d6bef0c72f7e870debeb2ea23b2",
+    "data/development_images.csv": "b82fceb3e9e9498c27eb951259c06d01f826353b0725dde49920832ce86379cd",
+    "data/development_pairs.csv": "dad8ea96fbd7e33c0d05a57af2098c2576e8ad845baa7b67f7b4c6ce4dd140bb",
+    "data/expression_annotations.csv": "d4ab7f2781ad3c9b4c4843dc2a2081b08d02947f11a693da8165329d726911ba",
+    "data/matched_pairs.csv": "afb24462aa356d99db142f8ded41fd6e8e790bd68266ce183ca75ac8cc9f82af",
+    "data/matching_candidate_pool.csv": "d8d45b2d0d5bef49d3c6da046ed474d7ade984e0215d2462dd3353c71e885daf",
+    "data/selected_images.csv": "6ea35e8fa99256721b5f02cf86ac0f8d8c15e1d8923467c7f11973d7a087c33a",
+    "data/source_inventory.csv": "8f25dd60813bc454a86f21511b6127ddaf25db4a4e58906635d595a10b1319eb",
+    "data/test_images.csv": "ba9c84bf8413615d9e88f9a38651480003d60d7c0b7da8b07e79ae1a5b9641d3",
+    "data/test_pairs.csv": "36794b41c529a3b90b0b49638cb61bc934bc0d9f6c66bd4037048260c61fa93c",
+    "data/train_images.csv": "a0d0c288f8687f46e4bb2a5613c68309668c401e95f6ccfa09a5d725eae4f148",
+    "data/train_pairs.csv": "93ff8d169b3b6f5ed1bf250f8f6e5ed36055c2b93f0d864d1705ff70c5a9dd73"
+  },
+  "status": "validated_target_reached",
+  "validation_sha256": "2d288a2df0cdd0fcfd266cef3a008183bbba30643da396bf42bfdf50cba93253"
+}

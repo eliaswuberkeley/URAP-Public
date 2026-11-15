@@ -1,0 +1,42 @@
+[
+  {
+    "file": "data/frozen/historical_image_fingerprints.csv",
+    "sha256": "4c2b66409651d1018626a57a45f88fdedcb681c98909d4532bde04151f2818a9",
+    "source": "image-dataset-curation-september29/data/frozen/historical_image_fingerprints.csv"
+  },
+  {
+    "file": "data/frozen/excluded_fairface_indices.csv",
+    "sha256": "ac17a1006993cc5d9414eec5039ad7584656958b8a06d471e90f80a2437e8587",
+    "source": "image-dataset-curation-september29/data/frozen/excluded_fairface_indices.csv"
+  },
+  {
+    "file": "data/frozen/historical_sources.json",
+    "sha256": "b787483d9fe2e5daeb862fd7d022b2ec7fc281876f30e115401698381a4b9c05",
+    "source": "image-dataset-curation-september29/data/frozen/historical_sources.json"
+  },
+  {
+    "file": "data/frozen/source_files.json",
+    "sha256": "4a76215771c9b13e52c7a5f58299faf914c1b40cc91343688932ccaf5f9efa54",
+    "source": "image-dataset-curation-september29/data/frozen/source_files.json"
+  },
+  {
+    "file": "data/frozen/expression_model.json",
+    "sha256": "3aeebe5fa21b2ac476018ee5061abba7b7454dce00963cf9c050ed6b1fe35d91",
+    "source": "image-dataset-curation-september29/data/frozen/expression_model.json"
+  },
+  {
+    "file": "data/frozen/september29_selected_images.csv",
+    "sha256": "7b08c31122f624e733ac279b87882c9138a05ea4c9dc7a16596105a5d4637d13",
+    "source": "image-dataset-curation-september29/data/selected_images.csv"
+  },
+  {
+    "file": "data/frozen/september29_candidate_audit.csv",
+    "sha256": "c218568e05d08637c156fc06f2cd8dad5ee7068950f9dadbf27b2aeab3baba72",
+    "source": "image-dataset-curation-september29/data/candidate_audit.csv"
+  },
+  {
+    "file": "data/frozen/september29_expression_annotations.csv",
+    "sha256": "5dcf053353dc7f6f42b5a10a61e292c76adf10cda5247b990d63705902a1649d",
+    "source": "image-dataset-curation-september29/data/expression_annotations.csv"
+  }
+]

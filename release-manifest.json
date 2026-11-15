@@ -1,0 +1,17 @@
+{
+  "tag": "fairface-v1.0.0",
+  "asset": "fairface-matched-v1.0.0.zip",
+  "sha256": "32c8f8971eb7c503b52a06ee0ed00b35955c84fdda98ddb6e23040a1fdebee26",
+  "bytes": 231279882,
+  "images": 4000,
+  "matched_pairs": 2000,
+  "images_by_split": {
+    "development": 800,
+    "test": 800,
+    "train": 2400
+  },
+  "selected_images_sha256": "6ea35e8fa99256721b5f02cf86ac0f8d8c15e1d8923467c7f11973d7a087c33a",
+  "matched_pairs_sha256": "afb24462aa356d99db142f8ded41fd6e8e790bd68266ce183ca75ac8cc9f82af",
+  "original_backgrounds": true,
+  "human_expression_review": false
+}

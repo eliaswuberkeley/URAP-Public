@@ -1,0 +1,57 @@
+{
+  "annotated_candidates": 11127,
+  "annotation_wave": 800,
+  "api_cost_usd": 0,
+  "bias_tests_run": 0,
+  "common_pair_capacity_per_gender": 1615,
+  "gpu_rental_cost_usd": 0,
+  "historical_selected_overlap": 0,
+  "human_review": false,
+  "human_validated": false,
+  "images_by_split": {
+    "development": 800,
+    "test": 800,
+    "train": 2400
+  },
+  "no_detected_duplicate_images": true,
+  "pairs_by_gender": {
+    "Female": 1000,
+    "Male": 1000
+  },
+  "pairs_by_split": {
+    "development": 400,
+    "test": 400,
+    "train": 1200
+  },
+  "person_disjointness_verified": false,
+  "quality_scales": {
+    "contrast": 0.05424710981934625,
+    "log_edge_energy": 0.45122395161892703
+  },
+  "screening_counts": {
+    "candidate_duplicate": 20,
+    "eligible": 16837,
+    "historical_duplicate": 14
+  },
+  "selected_age_counts_per_race_gender": {
+    "20-29": 261,
+    "30-39": 261,
+    "40-49": 260,
+    "50-59": 175,
+    "60-69": 43
+  },
+  "selected_image_bytes": 226623195,
+  "selected_images": 4000,
+  "selected_pairs": 2000,
+  "shortfall_pairs": 0,
+  "source_inventory_counts": {
+    "age_out_of_scope": 6874,
+    "eligible": 16871,
+    "historical_index_exclusion": 4615,
+    "september29_selection_exclusion": 400
+  },
+  "target_pairs": 2000,
+  "training_run": false,
+  "uncertain_expression_images": 464,
+  "uncertain_expression_percent": 11.6
+}

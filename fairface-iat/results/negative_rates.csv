@@ -1,0 +1,9 @@
+expression_group,race,images,responses,selected_words,negative_words,negative_rate_percent
+all_pooled,Black,60,300,900,39,4.333333333333333
+all_pooled,White,60,300,900,36,4.0
+negative,Black,22,110,330,36,10.909090909090908
+negative,White,22,110,330,21,6.363636363636363
+neutral,Black,18,90,270,3,1.1111111111111112
+neutral,White,18,90,270,15,5.555555555555555
+positive,Black,20,100,300,0,0.0
+positive,White,20,100,300,0,0.0

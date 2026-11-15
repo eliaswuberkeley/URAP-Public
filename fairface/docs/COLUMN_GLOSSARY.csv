@@ -1,0 +1,309 @@
+column,definition,file
+age_band,Publisher age band; exact age is unavailable.,data/candidate_audit.csv
+brightness,"Mean grayscale pixel intensity divided by 255, range 0-1; diagnostic only.",data/candidate_audit.csv
+candidate_path,Relative path from project root to cached candidate PNG; not the final delivery path.,data/candidate_audit.csv
+clipped_dark_fraction,Fraction of grayscale pixels <=5/255; diagnostic only.,data/candidate_audit.csv
+clipped_light_fraction,Fraction of grayscale pixels >=250/255; diagnostic only.,data/candidate_audit.csv
+contrast,Standard deviation of grayscale intensity on the 0-1 scale; matching proxy.,data/candidate_audit.csv
+difference_hash,64-bit grayscale difference hash encoded as hexadecimal.,data/candidate_audit.csv
+duplicate_of,First prior image or historical reference matching duplicate checks; empty otherwise.,data/candidate_audit.csv
+edge_energy,Sum of mean absolute vertical and horizontal neighboring-pixel differences on 0-1 grayscale.,data/candidate_audit.csv
+height,Exported image height in pixels.,data/candidate_audit.csv
+image_id,Stable unique image key derived from publisher training-row index.,data/candidate_audit.csv
+image_sha256,SHA-256 of exported RGB PNG bytes.,data/candidate_audit.csv
+inventory_status,Metadata eligibility or the first applicable exclusion reason.,data/candidate_audit.csv
+log_edge_energy,"Natural logarithm of max(edge_energy, 1e-8); matching proxy, not validated sharpness.",data/candidate_audit.csv
+perceptual_hash,64-bit DCT perceptual hash encoded as hexadecimal; approximate duplicate screening.,data/candidate_audit.csv
+pixel_sha256,"SHA-256 of RGB dimensions, mode prefix, and decoded pixel bytes.",data/candidate_audit.csv
+screen_rank,SHA-256 seeded ordering key; not a quality or bias score.,data/candidate_audit.csv
+screening_status,Technical/image-duplicate screening decision.,data/candidate_audit.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/candidate_audit.csv
+source_id,"Publisher split and zero-padded row index, e.g. train:012345.",data/candidate_audit.csv
+source_image_sha256,SHA-256 of the original encoded source image bytes.,data/candidate_audit.csv
+source_index,Zero-based index in the pinned concatenated FairFace training shards.,data/candidate_audit.csv
+source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.,data/candidate_audit.csv
+source_revision,Pinned Hugging Face dataset Git revision.,data/candidate_audit.csv
+source_split,"Publisher source split; train, distinct from the new research split.",data/candidate_audit.csv
+width,Exported image width in pixels.,data/candidate_audit.csv
+age_band,Publisher age band; exact age is unavailable.,data/common_support_quotas.csv
+common_pair_capacity_per_gender,Minimum feasible pair count across the two gender groups in this stratum.,data/common_support_quotas.csv
+expression_stratum,"Coarse expression class plus detailed top label, including uncertain status.",data/common_support_quotas.csv
+selected_pairs_per_gender,Selected pair quota for each gender in this stratum.,data/common_support_quotas.csv
+age_band,Publisher age band; exact age is unavailable.,data/development_images.csv
+brightness,"Mean grayscale pixel intensity divided by 255, range 0-1; diagnostic only.",data/development_images.csv
+candidate_path,Relative path from project root to cached candidate PNG; not the final delivery path.,data/development_images.csv
+clipped_dark_fraction,Fraction of grayscale pixels <=5/255; diagnostic only.,data/development_images.csv
+clipped_light_fraction,Fraction of grayscale pixels >=250/255; diagnostic only.,data/development_images.csv
+contrast,Standard deviation of grayscale intensity on the 0-1 scale; matching proxy.,data/development_images.csv
+difference_hash,64-bit grayscale difference hash encoded as hexadecimal.,data/development_images.csv
+duplicate_of,First prior image or historical reference matching duplicate checks; empty otherwise.,data/development_images.csv
+edge_energy,Sum of mean absolute vertical and horizontal neighboring-pixel differences on 0-1 grayscale.,data/development_images.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/development_images.csv
+expression_confidence,"Maximum softmax probability, 0-1; not calibrated emotion or intensity certainty.",data/development_images.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/development_images.csv
+expression_model_id,"Hugging Face ID of the local expression classifier, not Gemma.",data/development_images.csv
+expression_model_revision,Pinned classifier Git revision.,data/development_images.csv
+expression_provenance,Exact-image/model cached September 29 estimate or new October 6 CPU inference.,data/development_images.csv
+height,Exported image height in pixels.,data/development_images.csv
+image_id,Stable unique image key derived from publisher training-row index.,data/development_images.csv
+image_path,Final PNG path relative to private/dataset or the unzipped image-package root.,data/development_images.csv
+image_sha256,SHA-256 of exported RGB PNG bytes.,data/development_images.csv
+inventory_status,Metadata eligibility or the first applicable exclusion reason.,data/development_images.csv
+log_edge_energy,"Natural logarithm of max(edge_energy, 1e-8); matching proxy, not validated sharpness.",data/development_images.csv
+match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).,data/development_images.csv
+pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.,data/development_images.csv
+perceptual_hash,64-bit DCT perceptual hash encoded as hexadecimal; approximate duplicate screening.,data/development_images.csv
+pixel_sha256,"SHA-256 of RGB dimensions, mode prefix, and decoded pixel bytes.",data/development_images.csv
+review_status,automated_only; no independent human review.,data/development_images.csv
+screen_rank,SHA-256 seeded ordering key; not a quality or bias score.,data/development_images.csv
+screening_status,Technical/image-duplicate screening decision.,data/development_images.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/development_images.csv
+source_id,"Publisher split and zero-padded row index, e.g. train:012345.",data/development_images.csv
+source_image_sha256,SHA-256 of the original encoded source image bytes.,data/development_images.csv
+source_index,Zero-based index in the pinned concatenated FairFace training shards.,data/development_images.csv
+source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.,data/development_images.csv
+source_revision,Pinned Hugging Face dataset Git revision.,data/development_images.csv
+source_split,"Publisher source split; train, distinct from the new research split.",data/development_images.csv
+split,"New research allocation: train, development, or test.",data/development_images.csv
+width,Exported image width in pixels.,data/development_images.csv
+age_band,Publisher age band; exact age is unavailable.,data/development_pairs.csv
+black_image_id,Image ID of the pair member with publisher label Black.,data/development_pairs.csv
+confidence_abs_difference,"Absolute difference between paired classifier confidence values, constrained to <=0.15.",data/development_pairs.csv
+contrast_difference_sd,Paired Black-minus-White contrast difference divided by the matching-pool SD.,data/development_pairs.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/development_pairs.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/development_pairs.csv
+expression_stratum,"Coarse expression class plus detailed top label, including uncertain status.",data/development_pairs.csv
+log_edge_energy_difference_sd,Paired Black-minus-White log edge energy difference divided by matching-pool SD.,data/development_pairs.csv
+match_cost,Sum of squared quality differences in pooled candidate SD units plus (confidence difference / 0.15)^2.,data/development_pairs.csv
+match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).,data/development_pairs.csv
+pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.,data/development_pairs.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/development_pairs.csv
+split,"New research allocation: train, development, or test.",data/development_pairs.csv
+white_image_id,Image ID of the pair member with publisher label White.,data/development_pairs.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/expression_annotations.csv
+expression_confidence,"Maximum softmax probability, 0-1; not calibrated emotion or intensity certainty.",data/expression_annotations.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/expression_annotations.csv
+expression_model_id,"Hugging Face ID of the local expression classifier, not Gemma.",data/expression_annotations.csv
+expression_model_revision,Pinned classifier Git revision.,data/expression_annotations.csv
+expression_provenance,Exact-image/model cached September 29 estimate or new October 6 CPU inference.,data/expression_annotations.csv
+image_id,Stable unique image key derived from publisher training-row index.,data/expression_annotations.csv
+image_sha256,SHA-256 of exported RGB PNG bytes.,data/expression_annotations.csv
+age_band,Publisher age band; exact age is unavailable.,data/matched_pairs.csv
+black_image_id,Image ID of the pair member with publisher label Black.,data/matched_pairs.csv
+confidence_abs_difference,"Absolute difference between paired classifier confidence values, constrained to <=0.15.",data/matched_pairs.csv
+contrast_difference_sd,Paired Black-minus-White contrast difference divided by the matching-pool SD.,data/matched_pairs.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/matched_pairs.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/matched_pairs.csv
+expression_stratum,"Coarse expression class plus detailed top label, including uncertain status.",data/matched_pairs.csv
+log_edge_energy_difference_sd,Paired Black-minus-White log edge energy difference divided by matching-pool SD.,data/matched_pairs.csv
+match_cost,Sum of squared quality differences in pooled candidate SD units plus (confidence difference / 0.15)^2.,data/matched_pairs.csv
+match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).,data/matched_pairs.csv
+pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.,data/matched_pairs.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/matched_pairs.csv
+split,"New research allocation: train, development, or test.",data/matched_pairs.csv
+white_image_id,Image ID of the pair member with publisher label White.,data/matched_pairs.csv
+age_band,Publisher age band; exact age is unavailable.,data/matching_candidate_pool.csv
+brightness,"Mean grayscale pixel intensity divided by 255, range 0-1; diagnostic only.",data/matching_candidate_pool.csv
+candidate_path,Relative path from project root to cached candidate PNG; not the final delivery path.,data/matching_candidate_pool.csv
+clipped_dark_fraction,Fraction of grayscale pixels <=5/255; diagnostic only.,data/matching_candidate_pool.csv
+clipped_light_fraction,Fraction of grayscale pixels >=250/255; diagnostic only.,data/matching_candidate_pool.csv
+contrast,Standard deviation of grayscale intensity on the 0-1 scale; matching proxy.,data/matching_candidate_pool.csv
+difference_hash,64-bit grayscale difference hash encoded as hexadecimal.,data/matching_candidate_pool.csv
+duplicate_of,First prior image or historical reference matching duplicate checks; empty otherwise.,data/matching_candidate_pool.csv
+edge_energy,Sum of mean absolute vertical and horizontal neighboring-pixel differences on 0-1 grayscale.,data/matching_candidate_pool.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/matching_candidate_pool.csv
+expression_confidence,"Maximum softmax probability, 0-1; not calibrated emotion or intensity certainty.",data/matching_candidate_pool.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/matching_candidate_pool.csv
+expression_model_id,"Hugging Face ID of the local expression classifier, not Gemma.",data/matching_candidate_pool.csv
+expression_model_revision,Pinned classifier Git revision.,data/matching_candidate_pool.csv
+expression_provenance,Exact-image/model cached September 29 estimate or new October 6 CPU inference.,data/matching_candidate_pool.csv
+height,Exported image height in pixels.,data/matching_candidate_pool.csv
+image_id,Stable unique image key derived from publisher training-row index.,data/matching_candidate_pool.csv
+image_sha256,SHA-256 of exported RGB PNG bytes.,data/matching_candidate_pool.csv
+inventory_status,Metadata eligibility or the first applicable exclusion reason.,data/matching_candidate_pool.csv
+log_edge_energy,"Natural logarithm of max(edge_energy, 1e-8); matching proxy, not validated sharpness.",data/matching_candidate_pool.csv
+perceptual_hash,64-bit DCT perceptual hash encoded as hexadecimal; approximate duplicate screening.,data/matching_candidate_pool.csv
+pixel_sha256,"SHA-256 of RGB dimensions, mode prefix, and decoded pixel bytes.",data/matching_candidate_pool.csv
+screen_rank,SHA-256 seeded ordering key; not a quality or bias score.,data/matching_candidate_pool.csv
+screening_status,Technical/image-duplicate screening decision.,data/matching_candidate_pool.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/matching_candidate_pool.csv
+source_id,"Publisher split and zero-padded row index, e.g. train:012345.",data/matching_candidate_pool.csv
+source_image_sha256,SHA-256 of the original encoded source image bytes.,data/matching_candidate_pool.csv
+source_index,Zero-based index in the pinned concatenated FairFace training shards.,data/matching_candidate_pool.csv
+source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.,data/matching_candidate_pool.csv
+source_revision,Pinned Hugging Face dataset Git revision.,data/matching_candidate_pool.csv
+source_split,"Publisher source split; train, distinct from the new research split.",data/matching_candidate_pool.csv
+width,Exported image width in pixels.,data/matching_candidate_pool.csv
+age_band,Publisher age band; exact age is unavailable.,data/selected_images.csv
+brightness,"Mean grayscale pixel intensity divided by 255, range 0-1; diagnostic only.",data/selected_images.csv
+candidate_path,Relative path from project root to cached candidate PNG; not the final delivery path.,data/selected_images.csv
+clipped_dark_fraction,Fraction of grayscale pixels <=5/255; diagnostic only.,data/selected_images.csv
+clipped_light_fraction,Fraction of grayscale pixels >=250/255; diagnostic only.,data/selected_images.csv
+contrast,Standard deviation of grayscale intensity on the 0-1 scale; matching proxy.,data/selected_images.csv
+difference_hash,64-bit grayscale difference hash encoded as hexadecimal.,data/selected_images.csv
+duplicate_of,First prior image or historical reference matching duplicate checks; empty otherwise.,data/selected_images.csv
+edge_energy,Sum of mean absolute vertical and horizontal neighboring-pixel differences on 0-1 grayscale.,data/selected_images.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/selected_images.csv
+expression_confidence,"Maximum softmax probability, 0-1; not calibrated emotion or intensity certainty.",data/selected_images.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/selected_images.csv
+expression_model_id,"Hugging Face ID of the local expression classifier, not Gemma.",data/selected_images.csv
+expression_model_revision,Pinned classifier Git revision.,data/selected_images.csv
+expression_provenance,Exact-image/model cached September 29 estimate or new October 6 CPU inference.,data/selected_images.csv
+height,Exported image height in pixels.,data/selected_images.csv
+image_id,Stable unique image key derived from publisher training-row index.,data/selected_images.csv
+image_path,Final PNG path relative to private/dataset or the unzipped image-package root.,data/selected_images.csv
+image_sha256,SHA-256 of exported RGB PNG bytes.,data/selected_images.csv
+inventory_status,Metadata eligibility or the first applicable exclusion reason.,data/selected_images.csv
+log_edge_energy,"Natural logarithm of max(edge_energy, 1e-8); matching proxy, not validated sharpness.",data/selected_images.csv
+match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).,data/selected_images.csv
+pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.,data/selected_images.csv
+perceptual_hash,64-bit DCT perceptual hash encoded as hexadecimal; approximate duplicate screening.,data/selected_images.csv
+pixel_sha256,"SHA-256 of RGB dimensions, mode prefix, and decoded pixel bytes.",data/selected_images.csv
+review_status,automated_only; no independent human review.,data/selected_images.csv
+screen_rank,SHA-256 seeded ordering key; not a quality or bias score.,data/selected_images.csv
+screening_status,Technical/image-duplicate screening decision.,data/selected_images.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/selected_images.csv
+source_id,"Publisher split and zero-padded row index, e.g. train:012345.",data/selected_images.csv
+source_image_sha256,SHA-256 of the original encoded source image bytes.,data/selected_images.csv
+source_index,Zero-based index in the pinned concatenated FairFace training shards.,data/selected_images.csv
+source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.,data/selected_images.csv
+source_revision,Pinned Hugging Face dataset Git revision.,data/selected_images.csv
+source_split,"Publisher source split; train, distinct from the new research split.",data/selected_images.csv
+split,"New research allocation: train, development, or test.",data/selected_images.csv
+width,Exported image width in pixels.,data/selected_images.csv
+age_band,Publisher age band; exact age is unavailable.,data/source_inventory.csv
+image_id,Stable unique image key derived from publisher training-row index.,data/source_inventory.csv
+inventory_status,Metadata eligibility or the first applicable exclusion reason.,data/source_inventory.csv
+screen_rank,SHA-256 seeded ordering key; not a quality or bias score.,data/source_inventory.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/source_inventory.csv
+source_id,"Publisher split and zero-padded row index, e.g. train:012345.",data/source_inventory.csv
+source_index,Zero-based index in the pinned concatenated FairFace training shards.,data/source_inventory.csv
+source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.,data/source_inventory.csv
+source_revision,Pinned Hugging Face dataset Git revision.,data/source_inventory.csv
+source_split,"Publisher source split; train, distinct from the new research split.",data/source_inventory.csv
+age_band,Publisher age band; exact age is unavailable.,data/test_images.csv
+brightness,"Mean grayscale pixel intensity divided by 255, range 0-1; diagnostic only.",data/test_images.csv
+candidate_path,Relative path from project root to cached candidate PNG; not the final delivery path.,data/test_images.csv
+clipped_dark_fraction,Fraction of grayscale pixels <=5/255; diagnostic only.,data/test_images.csv
+clipped_light_fraction,Fraction of grayscale pixels >=250/255; diagnostic only.,data/test_images.csv
+contrast,Standard deviation of grayscale intensity on the 0-1 scale; matching proxy.,data/test_images.csv
+difference_hash,64-bit grayscale difference hash encoded as hexadecimal.,data/test_images.csv
+duplicate_of,First prior image or historical reference matching duplicate checks; empty otherwise.,data/test_images.csv
+edge_energy,Sum of mean absolute vertical and horizontal neighboring-pixel differences on 0-1 grayscale.,data/test_images.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/test_images.csv
+expression_confidence,"Maximum softmax probability, 0-1; not calibrated emotion or intensity certainty.",data/test_images.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/test_images.csv
+expression_model_id,"Hugging Face ID of the local expression classifier, not Gemma.",data/test_images.csv
+expression_model_revision,Pinned classifier Git revision.,data/test_images.csv
+expression_provenance,Exact-image/model cached September 29 estimate or new October 6 CPU inference.,data/test_images.csv
+height,Exported image height in pixels.,data/test_images.csv
+image_id,Stable unique image key derived from publisher training-row index.,data/test_images.csv
+image_path,Final PNG path relative to private/dataset or the unzipped image-package root.,data/test_images.csv
+image_sha256,SHA-256 of exported RGB PNG bytes.,data/test_images.csv
+inventory_status,Metadata eligibility or the first applicable exclusion reason.,data/test_images.csv
+log_edge_energy,"Natural logarithm of max(edge_energy, 1e-8); matching proxy, not validated sharpness.",data/test_images.csv
+match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).,data/test_images.csv
+pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.,data/test_images.csv
+perceptual_hash,64-bit DCT perceptual hash encoded as hexadecimal; approximate duplicate screening.,data/test_images.csv
+pixel_sha256,"SHA-256 of RGB dimensions, mode prefix, and decoded pixel bytes.",data/test_images.csv
+review_status,automated_only; no independent human review.,data/test_images.csv
+screen_rank,SHA-256 seeded ordering key; not a quality or bias score.,data/test_images.csv
+screening_status,Technical/image-duplicate screening decision.,data/test_images.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/test_images.csv
+source_id,"Publisher split and zero-padded row index, e.g. train:012345.",data/test_images.csv
+source_image_sha256,SHA-256 of the original encoded source image bytes.,data/test_images.csv
+source_index,Zero-based index in the pinned concatenated FairFace training shards.,data/test_images.csv
+source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.,data/test_images.csv
+source_revision,Pinned Hugging Face dataset Git revision.,data/test_images.csv
+source_split,"Publisher source split; train, distinct from the new research split.",data/test_images.csv
+split,"New research allocation: train, development, or test.",data/test_images.csv
+width,Exported image width in pixels.,data/test_images.csv
+age_band,Publisher age band; exact age is unavailable.,data/test_pairs.csv
+black_image_id,Image ID of the pair member with publisher label Black.,data/test_pairs.csv
+confidence_abs_difference,"Absolute difference between paired classifier confidence values, constrained to <=0.15.",data/test_pairs.csv
+contrast_difference_sd,Paired Black-minus-White contrast difference divided by the matching-pool SD.,data/test_pairs.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/test_pairs.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/test_pairs.csv
+expression_stratum,"Coarse expression class plus detailed top label, including uncertain status.",data/test_pairs.csv
+log_edge_energy_difference_sd,Paired Black-minus-White log edge energy difference divided by matching-pool SD.,data/test_pairs.csv
+match_cost,Sum of squared quality differences in pooled candidate SD units plus (confidence difference / 0.15)^2.,data/test_pairs.csv
+match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).,data/test_pairs.csv
+pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.,data/test_pairs.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/test_pairs.csv
+split,"New research allocation: train, development, or test.",data/test_pairs.csv
+white_image_id,Image ID of the pair member with publisher label White.,data/test_pairs.csv
+age_band,Publisher age band; exact age is unavailable.,data/train_images.csv
+brightness,"Mean grayscale pixel intensity divided by 255, range 0-1; diagnostic only.",data/train_images.csv
+candidate_path,Relative path from project root to cached candidate PNG; not the final delivery path.,data/train_images.csv
+clipped_dark_fraction,Fraction of grayscale pixels <=5/255; diagnostic only.,data/train_images.csv
+clipped_light_fraction,Fraction of grayscale pixels >=250/255; diagnostic only.,data/train_images.csv
+contrast,Standard deviation of grayscale intensity on the 0-1 scale; matching proxy.,data/train_images.csv
+difference_hash,64-bit grayscale difference hash encoded as hexadecimal.,data/train_images.csv
+duplicate_of,First prior image or historical reference matching duplicate checks; empty otherwise.,data/train_images.csv
+edge_energy,Sum of mean absolute vertical and horizontal neighboring-pixel differences on 0-1 grayscale.,data/train_images.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/train_images.csv
+expression_confidence,"Maximum softmax probability, 0-1; not calibrated emotion or intensity certainty.",data/train_images.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/train_images.csv
+expression_model_id,"Hugging Face ID of the local expression classifier, not Gemma.",data/train_images.csv
+expression_model_revision,Pinned classifier Git revision.,data/train_images.csv
+expression_provenance,Exact-image/model cached September 29 estimate or new October 6 CPU inference.,data/train_images.csv
+height,Exported image height in pixels.,data/train_images.csv
+image_id,Stable unique image key derived from publisher training-row index.,data/train_images.csv
+image_path,Final PNG path relative to private/dataset or the unzipped image-package root.,data/train_images.csv
+image_sha256,SHA-256 of exported RGB PNG bytes.,data/train_images.csv
+inventory_status,Metadata eligibility or the first applicable exclusion reason.,data/train_images.csv
+log_edge_energy,"Natural logarithm of max(edge_energy, 1e-8); matching proxy, not validated sharpness.",data/train_images.csv
+match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).,data/train_images.csv
+pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.,data/train_images.csv
+perceptual_hash,64-bit DCT perceptual hash encoded as hexadecimal; approximate duplicate screening.,data/train_images.csv
+pixel_sha256,"SHA-256 of RGB dimensions, mode prefix, and decoded pixel bytes.",data/train_images.csv
+review_status,automated_only; no independent human review.,data/train_images.csv
+screen_rank,SHA-256 seeded ordering key; not a quality or bias score.,data/train_images.csv
+screening_status,Technical/image-duplicate screening decision.,data/train_images.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/train_images.csv
+source_id,"Publisher split and zero-padded row index, e.g. train:012345.",data/train_images.csv
+source_image_sha256,SHA-256 of the original encoded source image bytes.,data/train_images.csv
+source_index,Zero-based index in the pinned concatenated FairFace training shards.,data/train_images.csv
+source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.,data/train_images.csv
+source_revision,Pinned Hugging Face dataset Git revision.,data/train_images.csv
+source_split,"Publisher source split; train, distinct from the new research split.",data/train_images.csv
+split,"New research allocation: train, development, or test.",data/train_images.csv
+width,Exported image width in pixels.,data/train_images.csv
+age_band,Publisher age band; exact age is unavailable.,data/train_pairs.csv
+black_image_id,Image ID of the pair member with publisher label Black.,data/train_pairs.csv
+confidence_abs_difference,"Absolute difference between paired classifier confidence values, constrained to <=0.15.",data/train_pairs.csv
+contrast_difference_sd,Paired Black-minus-White contrast difference divided by the matching-pool SD.,data/train_pairs.csv
+expression_class,neutral/positive/negative/uncertain; low confidence (<0.6) and surprise are uncertain.,data/train_pairs.csv
+expression_label,Pinned classifier's highest-probability visible-expression label.,data/train_pairs.csv
+expression_stratum,"Coarse expression class plus detailed top label, including uncertain status.",data/train_pairs.csv
+log_edge_energy_difference_sd,Paired Black-minus-White log edge energy difference divided by matching-pool SD.,data/train_pairs.csv
+match_cost,Sum of squared quality differences in pooled candidate SD units plus (confidence difference / 0.15)^2.,data/train_pairs.csv
+match_set_id,Two gender-specific pairs sharing age/expression quota and research split (four images).,data/train_pairs.csv
+pair_id,Unique Black-White two-image pair identifier; this is not a DPO preference pair.,data/train_pairs.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,data/train_pairs.csv
+split,"New research allocation: train, development, or test.",data/train_pairs.csv
+white_image_id,Image ID of the pair member with publisher label White.,data/train_pairs.csv
+field,"Categorical variable summarized, e.g. age_band or expression_class.",analysis/age_expression_counts.csv
+images,Number of images in the indicated group/split/category.,analysis/age_expression_counts.csv
+level,A category of the summarized variable.,analysis/age_expression_counts.csv
+percent,100 times category image count divided by its race/gender group image count.,analysis/age_expression_counts.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,analysis/age_expression_counts.csv
+source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.,analysis/age_expression_counts.csv
+images,Number of images in the indicated group/split/category.,analysis/group_split_counts.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,analysis/group_split_counts.csv
+source_race,Publisher-provided Black or White category; not inferred here or verified self-identification.,analysis/group_split_counts.csv
+split,"New research allocation: train, development, or test.",analysis/group_split_counts.csv
+maximum,Largest absolute pair difference or pair cost.,analysis/pair_distance_summary.csv
+median,50th percentile of absolute pair differences or pair cost.,analysis/pair_distance_summary.csv
+metric,Measured numeric variable summarized by the row.,analysis/pair_distance_summary.csv
+p95,95th percentile of absolute pair differences or pair cost; not a confidence interval.,analysis/pair_distance_summary.csv
+absolute_smd,Absolute signed_smd_black_minus_white; zero indicates equal means for this metric only.,analysis/quality_balance.csv
+black_mean,Mean metric among publisher Black-labeled images in the row's population/gender.,analysis/quality_balance.csv
+label,Presentation label for the metric.,analysis/quality_balance.csv
+metric,Measured numeric variable summarized by the row.,analysis/quality_balance.csv
+population,candidate_pool (before matching) or selected.,analysis/quality_balance.csv
+reference_pooled_sd,Square root of mean Black/White candidate-pool sample variances; shared before/after denominator.,analysis/quality_balance.csv
+signed_smd_black_minus_white,"(Black mean - White mean) / reference_pooled_sd; descriptive effect size, not p value.",analysis/quality_balance.csv
+source_gender,Publisher-provided Female or Male category; not verified identity.,analysis/quality_balance.csv
+used_in_matching,Whether the variable constrained matching rather than being diagnostic-only.,analysis/quality_balance.csv
+white_mean,Mean metric among publisher White-labeled images in the row's population/gender.,analysis/quality_balance.csv

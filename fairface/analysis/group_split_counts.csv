@@ -1,0 +1,13 @@
+images,source_gender,source_race,split
+600,Female,Black,train
+200,Female,Black,development
+200,Female,Black,test
+600,Female,White,train
+200,Female,White,development
+200,Female,White,test
+600,Male,Black,train
+200,Male,Black,development
+200,Male,Black,test
+600,Male,White,train
+200,Male,White,development
+200,Male,White,test
