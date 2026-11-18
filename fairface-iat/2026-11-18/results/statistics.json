@@ -1,0 +1,146 @@
+{
+  "negative": {
+    "fallbacks": 4,
+    "generation_calls": 244,
+    "primary": {
+      "black_higher": 4,
+      "black_pct": 12.5,
+      "both_zero": 18,
+      "ci95_pp": [
+        -0.8333333333333334,
+        25.0
+      ],
+      "exact_p": 0.21875,
+      "gap_pp": 10.833333333333334,
+      "holm_p": 0.65625,
+      "pairs": 24,
+      "ties": 18,
+      "valid_by_race": {
+        "Black": 120,
+        "White": 120
+      },
+      "white_higher": 2,
+      "white_pct": 1.6666666666666667
+    },
+    "raw_negative": {
+      "Black": 45,
+      "White": 6
+    },
+    "responses": 240,
+    "sampled_strict": {
+      "black_higher": 4,
+      "black_pct": 12.291666666666666,
+      "both_zero": 18,
+      "ci95_pp": [
+        -1.25,
+        24.375
+      ],
+      "exact_p": 0.21875,
+      "gap_pp": 10.208333333333334,
+      "pairs": 24,
+      "ties": 18,
+      "valid_by_race": {
+        "Black": 105,
+        "White": 103
+      },
+      "white_higher": 2,
+      "white_pct": 2.0833333333333335
+    }
+  },
+  "neutral": {
+    "fallbacks": 4,
+    "generation_calls": 244,
+    "primary": {
+      "black_higher": 0,
+      "black_pct": 0.0,
+      "both_zero": 24,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "exact_p": 1.0,
+      "gap_pp": 0.0,
+      "holm_p": 1,
+      "pairs": 24,
+      "ties": 24,
+      "valid_by_race": {
+        "Black": 120,
+        "White": 120
+      },
+      "white_higher": 0,
+      "white_pct": 0.0
+    },
+    "raw_negative": {
+      "Black": 0,
+      "White": 0
+    },
+    "responses": 240,
+    "sampled_strict": {
+      "black_higher": 0,
+      "black_pct": 0.0,
+      "both_zero": 24,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "exact_p": 1.0,
+      "gap_pp": 0.0,
+      "pairs": 24,
+      "ties": 24,
+      "valid_by_race": {
+        "Black": 107,
+        "White": 108
+      },
+      "white_higher": 0,
+      "white_pct": 0.0
+    }
+  },
+  "positive": {
+    "fallbacks": 5,
+    "generation_calls": 245,
+    "primary": {
+      "black_higher": 0,
+      "black_pct": 0.0,
+      "both_zero": 24,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "exact_p": 1.0,
+      "gap_pp": 0.0,
+      "holm_p": 1,
+      "pairs": 24,
+      "ties": 24,
+      "valid_by_race": {
+        "Black": 120,
+        "White": 120
+      },
+      "white_higher": 0,
+      "white_pct": 0.0
+    },
+    "raw_negative": {
+      "Black": 0,
+      "White": 0
+    },
+    "responses": 240,
+    "sampled_strict": {
+      "black_higher": 0,
+      "black_pct": 0.0,
+      "both_zero": 24,
+      "ci95_pp": [
+        0.0,
+        0.0
+      ],
+      "exact_p": 1.0,
+      "gap_pp": 0.0,
+      "pairs": 24,
+      "ties": 24,
+      "valid_by_race": {
+        "Black": 104,
+        "White": 101
+      },
+      "white_higher": 0,
+      "white_pct": 0.0
+    }
+  }
+}

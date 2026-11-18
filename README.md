@@ -10,12 +10,14 @@ Public research code and reproducibility resources maintained by Elias Wu.
 | [Public image download](https://github.com/eliaswuberkeley/URAP-Public/releases/tag/fairface-v1.0.1) | Versioned ZIP attachment, checksums and attribution. Images are not stored in Git history. |
 | [Matched FairFace IAT results](fairface-iat/README.md) | Local base Gemma, 120 development portraits, 600 responses, full 61-word plot and raw data. |
 | [Main IAT chart](fairface-iat/plots/fairface_base_61_word_counts_sorted.png) | Positive words left, negative words right, each half sorted by pooled frequency. |
+| [Human-reviewed FairFace IAT: positive, neutral and negative expressions](fairface-iat/2026-11-18/README.md) | November 18: 24 test pairs per expression, 720 base-Gemma responses, three charts and paired statistical tests. |
 | [Publication validation](VALIDATION.md) | Checks performed, reproducibility limits and source preservation. |
 
 The dataset has original backgrounds and automated expression labels. It is not a
-background-normalized or human-verified neutral-expression set. The IAT result uses
+background-normalized or human-verified neutral-expression set. The earlier development IAT uses
 120 of the 4,000 images, including negative, neutral and positive expression estimates;
-it is not a full-dataset evaluation or evidence that the model is unbiased.
+it is not a full-dataset evaluation or evidence that the model is unbiased. The November 18
+study separately evaluates 144 human-reviewed test portraits from the collection.
 
 Clone this repository and follow the matching or IAT README. Existing plots can be
 reproduced locally without model API calls or a GPU. New inference and training are
