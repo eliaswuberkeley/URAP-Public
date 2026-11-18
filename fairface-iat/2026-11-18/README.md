@@ -27,6 +27,13 @@ The vertical axis counts times a word was selected. All panels share the same ve
 - Each of the 144 original portraits received the same [61-word prompt](../iat_protocol.py); the model did not receive the expression or race label. Revision `96b6f1eccf38110c56df3a15bffe176da04bfd80`, H100, bfloat16, eager attention, Transformers 4.50.0. Five distinct reproducible seeds per portrait; sampled decoding with temperature 1.0, top-p 1.0 and up to 30 new tokens. Of 720 sampled answers, 13 needed a greedy formatting retry (up to 20 new tokens). All 720 final answers yielded three words under the historical parser.
 - Intervals use 100,000 pair-bootstrap draws. Two-sided exact sign-flip tests compare Black versus White within pairs; Holm adjustment covers the three primary race-gap tests. They do not test differences *between* expressions. The negative-panel gap was +10.21 pp when restricted to original samples that exactly followed the requested format.
 
+## Scoring labels
+
+The `analysis` column in [pair_rates.csv](results/pair_rates.csv) identifies the scoring rule:
+
+- **`primary`** (used for the charts): Counts the first three words the parser recognizes from the 61-word list, even if the answer includes extra text. If it finds fewer than three, it scores one formatting retry instead. All 720 responses were scored under this rule, including 13 retries.
+- **`sampled_strict`** (format check): Counts only original answers that contain exactly three comma-separated words from the list and no extra text. Capitalization and spacing around commas do not matter. Retries are excluded; 628 of 720 original answers qualified.
+
 ## Data and local reproduction
 
 | File | Contents |
