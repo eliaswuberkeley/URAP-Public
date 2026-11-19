@@ -11,6 +11,7 @@ Public research code and reproducibility resources maintained by Elias Wu.
 | [Matched FairFace IAT results](fairface-iat/README.md) | Local base Gemma, 120 development portraits, 600 responses, full 61-word plot and raw data. |
 | [Main IAT chart](fairface-iat/plots/fairface_base_61_word_counts_sorted.png) | Positive words left, negative words right, each half sorted by pooled frequency. |
 | [Human-reviewed FairFace IAT: positive, neutral and negative expressions](fairface-iat/2026-11-18/README.md) | November 18: 24 test pairs per expression, 720 base-Gemma responses, three charts and paired statistical tests. |
+| [Negative-expression IAT follow-up: 36 human-matched pairs](fairface-iat/2026-11-18/negative-36/README.md) | Pooled base-Gemma results, 61-word chart, paired significance test and all 360 responses. |
 | [Publication validation](VALIDATION.md) | Checks performed, reproducibility limits and source preservation. |
 
 The dataset has original backgrounds and automated expression labels. It is not a
